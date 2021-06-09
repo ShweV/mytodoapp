@@ -97,7 +97,7 @@ class _SwiperScreen1State extends State<SwiperScreen1> with SingleTickerProvider
                     ],
                     ),
                     Image.asset(
-                        'assets/images/1.png',
+                        'assets/images/2.png',
                         height: 430,
                         width: 350,
                         fit: BoxFit.scaleDown

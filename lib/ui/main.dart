@@ -6,6 +6,8 @@ import 'SwiperScreen2.dart';
 import 'SwiperScreen3.dart';
 import 'SwiperScreen4.dart';
 import 'SwiperScreen5.dart';
+import 'SwiperScreen6.dart';
+import 'SwiperScreen7.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,6 +34,8 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               SwiperScreen3(),
               SwiperScreen4(),
               SwiperScreen5(),
+              SwiperScreen6(),
+              SwiperScreen7(),
           ],
           onPageChanged: (num){
             print("Current page number is "+num.toString());

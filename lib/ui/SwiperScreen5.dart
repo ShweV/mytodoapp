@@ -7,22 +7,13 @@ class SwiperScreen5 extends StatefulWidget {
 }
 
 
-class _SwiperScreen5State extends State<SwiperScreen5> with SingleTickerProviderStateMixin {
-  AnimationController controller;
-  Animation<Offset> offset;
+class _SwiperScreen5State extends State<SwiperScreen5> {
   final _totalDots = 7;
   double _currentPosition = 5.0;
 
   @override
   void initState() {
     super.initState();
-
-    controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
-    controller.forward();
-
-    offset = Tween<Offset>(end: Offset.zero, begin: Offset(0.0, 1.0)).animate(
-        controller);
     _updatePosition(_currentPosition);
   }
 
