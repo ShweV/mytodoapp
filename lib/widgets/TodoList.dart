@@ -20,18 +20,25 @@ class TodoListState extends State<TodoList> {
     final title = 'Personal List';
 
     DateTime currentDate = DateTime.now();
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
           title: Text(title),
         ),
         body: Column (
           children: [
+            Container (
+                color: Colors.black,
+                child : Text ('Personal List',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                )
+            ),
             TextField(
+              decoration: InputDecoration(fillColor: Colors.orange, filled: true),
+              textInputAction: TextInputAction.done,
+            ),
+            TextField (
               decoration: InputDecoration(fillColor: Colors.orange, filled: true),
               textInputAction: TextInputAction.done,
             ),
@@ -45,13 +52,10 @@ class TodoListState extends State<TodoList> {
               },
               child: const Text('set reminder'),
             ),
-            Center(
-            child :TaskList(),
-            ),
+            TaskList(),
           ],
         ),
-      ),
-    );
+      );
   }
 
   Future<void> _selectDate(BuildContext context) async {

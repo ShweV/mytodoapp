@@ -29,7 +29,7 @@ class TaskListState extends State<TaskList> {
             return Dismissible(
               // Each Dismissible must contain a Key. Keys allow Flutter to
               // uniquely identify widgets.
-              key: Key(items[index]),
+              key: Key(item),
               // Provide a function that tells the app
               // what to do after an item has been swiped away.
               onDismissed: (direction) {
@@ -41,7 +41,7 @@ class TaskListState extends State<TaskList> {
               // Show a red background as the item is swiped away.
               background: Container(color: Colors.black87),
               child: ListTile(
-                title: Text('$item.title'), tileColor: Colors.amber,),
+                title: Text('$item'), tileColor: Colors.amber,),
             );
           },
         ),

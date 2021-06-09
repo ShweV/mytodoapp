@@ -1,3 +1,5 @@
+import 'package:MyToDoApp/widgets/TaskList.dart';
+import 'package:MyToDoApp/widgets/TodoList.dart';
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
@@ -59,6 +61,10 @@ class SwiperScreen7 extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TodoList()),
+                    );
                   },
                   style: style,
                   child: Text(
